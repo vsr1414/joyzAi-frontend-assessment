@@ -1,0 +1,27 @@
+@mixin list-style-type-none {
+  list-style-type: none;
+
+  li.dashed::before {
+    content: "- ";
+  }
+}
+ul {
+    &.clear-padding {
+      padding: 0;
+    }
+    &.list-style-type-none {
+      @include list-style-type-none;
+    }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-10px {
+  gap: 10px;
+}
+
+.align-items-center {
+  align-items: center;
+}
